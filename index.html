@@ -1,64 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ofertas Dinno</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'Arial', sans-serif;
-      background: #fff;
+      background: #ffffff;
+      color: #222;
       text-align: center;
-      position: relative;
       overflow-x: hidden;
     }
 
-    .bg-icon {
-      position: absolute;
-      opacity: 0.08;
-      font-size: 4em;
-      color: #aaa;
-      z-index: 0;
+    h1 {
+      color: #0055ff;
+      font-size: 2.4em;
+      margin-top: 20px;
     }
 
-    .top {
-      padding: 30px 20px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .logo-img {
+    .logo {
       width: 140px;
       height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      margin: 0 auto 20px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      color: #0066ff;
-      font-size: 2.2em;
-      margin-bottom: 10px;
+      margin: 20px auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
 
     p {
       font-size: 18px;
-      margin-bottom: 30px;
+      margin: 10px auto 30px;
+      padding: 0 20px;
     }
 
     .btn {
       display: block;
-      margin: 15px auto;
-      padding: 14px;
       width: 90%;
-      max-width: 320px;
-      border-radius: 8px;
+      max-width: 330px;
+      margin: 12px auto;
+      padding: 14px;
       font-size: 17px;
-      color: #fff;
+      border: none;
+      border-radius: 8px;
+      color: white;
       text-decoration: none;
       transition: transform 0.2s ease;
     }
@@ -67,70 +55,66 @@
       transform: scale(1.05);
     }
 
-    .whatsapp { background: #25D366; }
-    .telegram { background: #0088cc; }
-    .instagram { background: #E1306C; }
-
-    .floating-icons {
-      position: fixed;
-      right: 15px;
-      bottom: 15px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 5;
+    .whatsapp { background-color: #25D366; }
+    .telegram { background-color: #0088cc; }
+    .instagram {
+      background: linear-gradient(to right, #f58529, #dd2a7b, #8134af);
     }
 
-    .floating-icons a {
-      background: white;
-      border-radius: 50%;
-      padding: 12px;
-      color: #444;
-      font-size: 18px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    .floating-brand {
+      position: absolute;
+      opacity: 0.07;
+      font-size: 16px;
     }
+
+    .brand-img {
+      position: absolute;
+      opacity: 0.06;
+      width: 100px;
+      max-width: 20vw;
+    }
+
+    /* Posicionamento aleatório das marcas */
+    .b1 { top: 5%; left: 5%; }
+    .b2 { top: 15%; right: 5%; }
+    .b3 { top: 35%; left: 7%; }
+    .b4 { top: 60%; right: 8%; }
+    .b5 { bottom: 10%; left: 10%; }
+    .b6 { bottom: 5%; right: 5%; }
 
     @media (max-width: 600px) {
-      .bg-icon {
-        font-size: 3em;
-      }
+      h1 { font-size: 1.8em; }
+      .btn { font-size: 16px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Ícones flutuando no fundo -->
-  <div class="bg-icon" style="top: 10%; left: 5%;">🏬</div>
-  <div class="bg-icon" style="top: 25%; right: 10%;">🛒</div>
-  <div class="bg-icon" style="top: 50%; left: 20%;">💰</div>
-  <div class="bg-icon" style="bottom: 20%; right: 15%;">📦</div>
-  <div class="bg-icon" style="bottom: 10%; left: 10%;">🛍️</div>
+  <!-- Fundos com logos flutuando -->
+  <img class="brand-img b1" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Casas_Bahia_logo.svg">
+  <img class="brand-img b2" src="https://upload.wikimedia.org/wikipedia/commons/2/28/Amazon_logo.svg">
+  <img class="brand-img b3" src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Mercado_Livre_logo.svg">
+  <img class="brand-img b4" src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Magazine_Luiza_logo.svg">
+  <img class="brand-img b5" src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adidas_Logo.svg">
+  <img class="brand-img b6" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Nike_text_logo.svg">
 
   <!-- Conteúdo principal -->
-  <div class="top">
-    <img class="logo-img" src="https://i.imgur.com/Vbi0Emo.jpeg" alt="Logo Dinno"> <!-- Sua imagem personalizada -->
-    <h1>OFERTAS DINNO</h1>
-    <p>👉 Clique nos botões abaixo para participar:</p>
+  <h1>OFERTAS DINNO</h1>
+  <img class="logo" src="https://i.imgur.com/Vbi0Emo.jpeg" alt="Logo Dinno">
 
-    <a class="btn whatsapp" href="https://chat.whatsapp.com/FiMRmC9cacYJEm2zXNyma7" target="_blank">
-      <i class="fab fa-whatsapp"></i> Entrar no grupo do WhatsApp
-    </a>
+  <p>👉 Clique no botão abaixo e entre no meu grupo do WhatsApp:</p>
 
-    <a class="btn telegram" href="https://t.me/Ofertasdodinno" target="_blank">
-      <i class="fab fa-telegram"></i> Entrar no canal do Telegram
-    </a>
+  <a class="btn whatsapp" href="https://chat.whatsapp.com/FiMRmC9cacYJEm2zXNyma7" target="_blank">
+    <i class="fab fa-whatsapp"></i> Entrar no grupo do WhatsApp
+  </a>
 
-    <a class="btn instagram" href="https://www.instagram.com/ofertasdodinno/" target="_blank">
-      <i class="fab fa-instagram"></i> Seguir no Instagram
-    </a>
-  </div>
+  <a class="btn telegram" href="https://t.me/Ofertasdodinno" target="_blank">
+    <i class="fab fa-telegram"></i> Entrar no canal do Telegram
+  </a>
 
-  <!-- Botões flutuantes -->
-  <div class="floating-icons">
-    <a href="https://chat.whatsapp.com/FiMRmC9cacYJEm2zXNyma7" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://t.me/Ofertasdodinno" target="_blank"><i class="fab fa-telegram"></i></a>
-    <a href="https://www.instagram.com/ofertasdodinno/" target="_blank"><i class="fab fa-instagram"></i></a>
-  </div>
+  <a class="btn instagram" href="https://www.instagram.com/ofertasdodinno/" target="_blank">
+    <i class="fab fa-instagram"></i> Seguir no Instagram
+  </a>
 
 </body>
 </html>
